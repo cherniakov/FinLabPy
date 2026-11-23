@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "FinLabPy"
+version = "0.1.0"
+description = "Инструменты для алгоритмической торговли и интеграции с Backtrader"
+requires-python = ">=3.12"
+dependencies = [
+    "scipy",
+    "pandas",
+    "matplotlib",
+    "mplfinance",
+    "maxapi",
+    "aiogram",
+    "discord.py",
+    "backtrader",
+    "lightweight_charts",
+    "yadisk",
+]
+
+[tool.setuptools]
+packages = [
+    "FinLabPy",
+    "FinLabPy.BackTrader",
+    "FinLabPy.Brokers",
+    "FinLabPy.Schedule",
+    "FinLabPy.Storage",
+    "FinLabPy.Plot",
+    "FinLabPy.Plot.LightweightCharts",
+]
+
+[tool.setuptools.package-dir]
+"FinLabPy" = "."
