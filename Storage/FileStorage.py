@@ -14,7 +14,7 @@ class FileStorage(Storage):
 
     def __init__(self, source):
         super().__init__(source)
-        self.datapath = path.join(path.dirname(path.realpath(__file__)), '..', '..', 'Data', source, '')  # Путь сохранения файлов
+        self.datapath = path.join(path.dirname(path.realpath(__file__)), 'Data', source, '')  # Путь сохранения файлов
         if not path.exists(self.datapath):  # Если папки для сохранения файла не существует
             makedirs(self.datapath)  # то создаем ее
 
